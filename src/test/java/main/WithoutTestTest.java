@@ -44,12 +44,24 @@ class WithoutTestTest {
 
     @Test
     void test_checkGender() {
-        // write your test cases here
+        String result1 = WithoutTest.checkGender(0);
+        assertEquals("nő", result1);
+        String result2 = WithoutTest.checkGender(1);
+        assertEquals("férfi", result2);
+        String result3 = WithoutTest.checkGender(-1);
+        assertEquals("valami más", result3);
     }
 
     @Test
     void test_trafficLight() {
-        // write your test cases here
+        String green = WithoutTest.trafficLight("zöld");
+        assertEquals("SZABAD", green);
+        String yellow = WithoutTest.trafficLight("sárga");
+        assertEquals("LASSÍTS", yellow);
+        String red = WithoutTest.trafficLight("piros");
+        assertEquals("MEGÁLLJ", red);
+        String blue = WithoutTest.trafficLight("kék");
+        assertEquals("NEM TUDOM", blue);
     }
 
     @Test
