@@ -66,7 +66,15 @@ class WithoutTestTest {
 
     @Test
     void test_isLeapYear() {
-        // write your test cases here
+        assertTrue(WithoutTest.isLeapYear(1584));
+        assertTrue(WithoutTest.isLeapYear(1600));
+        assertTrue(WithoutTest.isLeapYear(1996));
+        assertTrue(WithoutTest.isLeapYear(2024));
+
+        assertFalse(WithoutTest.isLeapYear(1200));
+        assertFalse(WithoutTest.isLeapYear(1580));
+        assertFalse(WithoutTest.isLeapYear(1800));
+        assertFalse(WithoutTest.isLeapYear(2021));
     }
 
 }
